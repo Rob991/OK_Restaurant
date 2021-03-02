@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sfondo3"
+    tools:context="view.AddPrenotazioneActivity">
+
+    <EditText
+        android:id="@+id/setCognome"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="234dp"
+        android:layout_marginBottom="28dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Cognome"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/setOrario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/setData"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginEnd="17dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Data"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/setOrario"
+        app:layout_constraintEnd_toStartOf="@+id/setOrario"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/setOrario"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="26dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Orario"
+        android:inputType="datetime"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/setNumPersone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/setData"
+        app:layout_constraintTop_toBottomOf="@+id/setCognome" />
+
+    <EditText
+        android:id="@+id/setNumPersone"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="99dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Num"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnSalva"
+        app:layout_constraintEnd_toStartOf="@+id/setNota"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setOrario" />
+
+    <EditText
+        android:id="@+id/setNota"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="97dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:text="Nota"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/setNumPersone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/setNumPersone" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnSalva"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="257dp"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setNumPersone">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Inserisci"
+            android:textColor="@color/black" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
